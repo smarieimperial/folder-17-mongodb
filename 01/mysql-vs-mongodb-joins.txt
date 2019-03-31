@@ -1,0 +1,33 @@
+pets
+	
+	id name
+
+toys
+	
+	id name pet_id
+
+write a query to return me all the pets and their toys
+
+in MySQL
+
+	SELECT pets.id AS pet_id, pets.name AS pet_name, toys.id AS toy_id, toys.name AS toy_name
+	FROM pets
+	LEFT JOIN toys
+	ON pets.id = toys.pet_id;
+
+in MongoDB
+
+	pets collection (like a table)
+		document (like a row)
+			{
+				id : 1,
+				name : 'fido',
+				toys : [
+					'ball',
+					'bone'
+				]
+			}
+
+		db.pets.find();
+
+

@@ -1,0 +1,25 @@
+table: pets
+
+	id name (columns)
+
+	rows:
+
+		1  fido
+
+		2  spot
+
+		3  meow
+
+
+collection: pets
+	
+	documents:
+		{id: 1, name: fido }
+
+		{id: 2, name: spot }
+
+		{id: 3, name: meow }
+
+		id, name are fields
+
+

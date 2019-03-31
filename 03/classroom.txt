@@ -1,0 +1,48 @@
+show collections
+
+db.students.update([{name: 'Omar', {$push : {hobbies: ['extreme basket weaving;] } }
+rownumber: 1, os: 'elcaptain', hobbies: ['soccer', 'food']}, ])
+
+db.students.update({name: 'Joe'}, 
+{
+    $push : {
+        hobbies: 'extreme basket weaving'
+    }
+})
+
+db.students.update({ name : 'sue'}, { os : 'windows 10'})
+
+// to find jerry type the below,
+
+db.students.find({ name : 'jerry' }).pretty()
+
+// answer to second problem:
+    db.students.update(
+        { name: 'sara' },
+        { $set: 
+            {
+                os: 'windows 10'
+            }
+        }
+    )
+
+// answer to third problem:
+    db.students.update(
+        { },
+        { $set:
+            {
+                gavecandy: false
+            }
+        },
+        { multi: true }
+    )
+
+// answer to fourth problem:
+    db.students.update(
+        { name: 'patty'},
+        { $set:
+            {
+                gavecandy: true
+            }
+        }
+    )
